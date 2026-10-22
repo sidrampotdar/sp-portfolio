@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Mail } from "lucide-react";
 
@@ -15,12 +14,12 @@ export function HeroBlock() {
       <div className="hero-surface absolute inset-0">
         <div className="hero-grid absolute inset-0" />
         <Particles
-          particleCount={170}
-          particleSpread={11}
-          speed={0.14}
+          particleCount={180}
+          particleSpread={12}
+          speed={0.18}
           alphaParticles
-          particleBaseSize={120}
-          sizeRandomness={1.2}
+          particleBaseSize={130}
+          sizeRandomness={1.4}
           cameraDistance={18}
           className="hero-particles"
         />
@@ -39,7 +38,7 @@ export function HeroBlock() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.26em] text-cyan-200 shadow-[0_0_30px_rgba(34,211,238,0.2)]"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.26em] text-cyan-200 shadow-[0_0_28px_rgba(34,211,238,0.22)]"
           >
             <span className="h-2 w-2 rounded-full bg-cyan-300" />
             Available for select work
@@ -174,6 +173,12 @@ export function HeroBlock() {
                 <span />
               </div>
             </motion.div>
+
+            <div className="floating-cube" aria-hidden="true">
+              <span className="cube-face cube-front" />
+              <span className="cube-face cube-side" />
+              <span className="cube-face cube-top" />
+            </div>
 
             <motion.div
               animate={{ y: [0, -10, 0], x: [0, 10, 0] }}
